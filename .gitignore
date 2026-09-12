@@ -1,0 +1,8 @@
+a73-raw/
+a73-soner/
+a73-es-sensus/
+*.xml
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
