@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this measurement or its figures, please cite it as below."
+title: "psrtype-samfyring — ENTSO-E's schema permits multiple production types per generation unit; in four zones with documented co-firing, none is reported"
+abstract: >-
+  ENTSO-E's GL_MarketDocument schema places TimeSeries at 1..unbounded per
+  document, each carrying exactly one psrType, with no uniqueness constraint on
+  the generating unit mRID. Two TimeSeries for the same unit with different
+  production types are therefore schema-valid. Across 1 497 documents covering
+  238 generation units in four bidding zones where biomass co-firing is
+  documented in a dated primary source for 2021-2024 -- Finland, Poland, the
+  Netherlands and Czechia -- no unit carries two production types in the same
+  document. Neither ENTSO-E's Manual of Procedures nor its schema document
+  contains any of twelve multi-fuel terms. Criteria were preregistered and
+  checksummed before the finding was frozen.
+authors:
+  - family-names: "Botten Nicolaysen"
+    given-names: "Eirik"
+    orcid: "https://orcid.org/0009-0001-9188-6788"
+    affiliation: "EcoDeco AS"
+license: Apache-2.0
+license-url: "https://www.apache.org/licenses/LICENSE-2.0"
+keywords:
+  - ENTSO-E
+  - transparency platform
+  - data quality
+  - co-firing
+  - biomass
+  - production type
+# repository-code: intentionally omitted until a remote exists and answers.

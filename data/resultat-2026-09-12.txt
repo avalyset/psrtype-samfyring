@@ -1,0 +1,24 @@
+sone        døgn  enheter  >1 psrType   psrTyper i sonen
+AT            12       35           0   Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro RoR, Hydro Reservoir
+BE            12       46           0   Biomass, Fossil Gas, Hydro Pumped, Nuclear, Wind Offshore
+CZ            12       39           0   Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Nuclear
+ES            12      173          11   Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro Reservoir, Nuclear, 
+      *** MUELA 1G (18WMUE1-12345-FP): ['Hydro Pumped', 'Hydro Reservoir']
+      *** MUELA 2G (18WMUE2-12345-FF): ['Hydro Pumped', 'Hydro Reservoir']
+      *** MUELA 3G (18WMUE3-12345-F5): ['Hydro Pumped', 'Hydro Reservoir']
+      *** MUELA 4G (18WMUE4-123456-6): ['Hydro Pumped', 'Hydro Reservoir']
+      *** MUELA 5G (18WMUE5-123456-X): ['Hydro Pumped', 'Hydro Reservoir']
+      *** MUELA 6G (18WMUE6-123456-N): ['Hydro Pumped', 'Hydro Reservoir']
+      *** MUELA 7G (18WMUE7-123456-D): ['Hydro Pumped', 'Hydro Reservoir']
+      *** SALLENT 1G (18WSLT1-12345-F1): ['Hydro Pumped', 'Hydro Reservoir']
+      *** SALLENT 2G (18WSLT2-12345-FS): ['Hydro Pumped', 'Hydro Reservoir']
+      *** SALLENT 3G (18WSLT3-12345-FI): ['Hydro Pumped', 'Hydro Reservoir']
+      *** SALLENT 4G (18WSLT4-12345-F8): ['Hydro Pumped', 'Hydro Reservoir']
+FI          1461       36           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Fossil Peat, Nuclea
+FR            12      151           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Hydro Pumped, Hydro
+IT            12      163           0   Coal-derived gas, Fossil Gas, Fossil Hard coal, Fossil Oil, Geothermal
+NL            12       43           0   Biomass, Fossil Gas, Fossil Hard coal, Nuclear, Other
+PL            12      120           0   Biomass, Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro Re
+PT            12       73           0   Fossil Gas, Hydro Pumped, Hydro RoR, Hydro Reservoir
+
+SUM                   879          11

@@ -1,0 +1,12 @@
+Data and documentation in this repository -- the contents of data/, adr/,
+PREREG-v1.md and README.md -- are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+https://creativecommons.org/licenses/by/4.0/
+
+Source code (src/, tests/) is licensed under Apache-2.0; see LICENSE.
+
+Derived from ENTSO-E Transparency Platform data item 16.1.A (A73). The ENTSO-E
+Transparency Platform terms apply to the underlying raw data, which is NOT
+redistributed here. The ENTSO-E schema document cited in README.md is ENTSO-E's
+and is not included.
