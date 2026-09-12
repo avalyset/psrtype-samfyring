@@ -2,6 +2,7 @@
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from src.kriterier import treff, omklassifisering, belagt_sone, bomrate
+from src.kriterier import under_terskel, telles
 
 def test_treff_krever_ulik_type_samme_dokument():
     assert treff(['B10','B12']) is True
@@ -31,3 +32,24 @@ def test_bomraten_er_den_som_staar_i_prereg():
     assert abs(bomrate(30) - 0.357) < 0.001
     # 50 % doegndekning = 182 av 365
     assert bomrate(182) < 0.0003
+
+
+def test_under_terskel_feller_cz():
+    """Hodonin 50+57 MW og Porici II 3x55 MW ligger alle under 100 MW."""
+    assert under_terskel([50.0, 57.0]) is True
+    assert under_terskel([55.0, 55.0, 55.0]) is True
+    # Polaniec blokk 2-7 er 225 MW hver
+    assert under_terskel([225.0] * 6) is False
+    # blandet: en enhet over terskelen er nok til at sonen kan testes
+    assert under_terskel([55.0, 225.0]) is False
+    # tom liste er ikke et belegg for noe
+    assert under_terskel([]) is False
+
+
+def test_telles_krever_belagt_OG_over_terskel():
+    """CZ er belagt (CEZ 2023) men faller paa terskelen; PL bestaar begge."""
+    assert telles(True, True, 2023, [50.0, 57.0]) is False
+    assert telles(True, True, 2023, [225.0] * 6) is True
+    # ubelagt sone telles ikke uansett storrelse
+    assert telles(False, True, 2023, [225.0]) is False
+    assert telles(True, True, 2017, [225.0]) is False

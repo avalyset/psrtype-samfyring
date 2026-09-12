@@ -1,17 +1,24 @@
 cff-version: 1.2.0
 message: "If you use this measurement or its figures, please cite it as below."
-title: "psrtype-samfyring — ENTSO-E's schema permits multiple production types per generation unit; in four zones with documented co-firing, none is reported"
+title: "psrtype-samfyring — ENTSO-E's schema permits two production types per generation unit; no TSO uses it, and three solve multi-fuel plants three different ways"
 abstract: >-
   ENTSO-E's GL_MarketDocument schema places TimeSeries at 1..unbounded per
   document, each carrying exactly one psrType, with no uniqueness constraint on
   the generating unit mRID. Two TimeSeries for the same unit with different
-  production types are therefore schema-valid. Across 1 497 documents covering
-  238 generation units in four bidding zones where biomass co-firing is
-  documented in a dated primary source for 2021-2024 -- Finland, Poland, the
-  Netherlands and Czechia -- no unit carries two production types in the same
-  document. Neither ENTSO-E's Manual of Procedures nor its schema document
-  contains any of twelve multi-fuel terms. Criteria were preregistered and
-  checksummed before the finding was frozen.
+  production types are therefore schema-valid. Across 2 191 documents covering
+  199 generation units in three bidding zones where biomass co-firing is
+  documented in a dated primary source for 2021-2024 -- Finland, Poland and the
+  Netherlands -- no unit carries two production types in the same document. Unit
+  resolution itself works: Drax appears in GB data with six units under three
+  production types simultaneously, so the gap is fuel mixing within a single
+  unit. Three TSOs instead use three different single-valued workarounds: PSE
+  splits the plant into two production units, TenneT relabels over time, and
+  CEPS records a multi-fuel plant as "Other". Neither Regulation (EU) 543/2013
+  nor ENTSO-E's Manual of Procedures, to which Article 5(d) delegates the
+  classification of production types, contains any of twelve multi-fuel terms.
+  Criteria were preregistered and checksummed before the finding was frozen.
+  v1.1.0 corrects three claims in v1.0.0 about zone coverage and adds the
+  measured downstream effect.
 authors:
   - family-names: "Botten Nicolaysen"
     given-names: "Eirik"
@@ -35,5 +42,5 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.22726239"
     description: "Version DOI — v1.0.0"
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-09-12"

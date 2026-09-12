@@ -18,3 +18,16 @@ def belagt_sone(primaer: bool, lest: bool, aar: int | None) -> bool:
 def bomrate(varighet_doegn: int, n_doegn: int = 12, aar: int = 365) -> float:
     """Sannsynlighet for at n tilfeldige doegn bommer paa et fenomen (§3)."""
     return (1 - varighet_doegn/aar) ** n_doegn
+
+# --- PREREG-v1-TILLEGG-01, datert 2026-09-12. Legger til, endrer ingenting over. ---
+
+A73_TERSKEL_MW = 100.0  # forordning (EU) 543/2013 artikkel 16(1)(a)
+
+def under_terskel(genereringsenheter_mw) -> bool:
+    """T1.1: alle anleggets genereringsenheter under 100 MW -> ikke i A73 i det hele tatt."""
+    e = list(genereringsenheter_mw)
+    return bool(e) and all(mw < A73_TERSKEL_MW for mw in e)
+
+def telles(primaer: bool, lest: bool, aar: int | None, genereringsenheter_mw=()) -> bool:
+    """En sone teller bare hvis den er belagt (§2.3) OG anleggene er over terskelen (T1.1)."""
+    return belagt_sone(primaer, lest, aar) and not under_terskel(genereringsenheter_mw)

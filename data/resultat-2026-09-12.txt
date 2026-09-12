@@ -1,8 +1,10 @@
-sone        døgn  enheter  >1 psrType   psrTyper i sonen
-AT            12       35           0   Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro RoR, Hydro Reservoir
-BE            12       46           0   Biomass, Fossil Gas, Hydro Pumped, Nuclear, Wind Offshore
-CZ            12       39           0   Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Nuclear
-ES            12      173          11   Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro Reservoir, Nuclear, 
+STIKKPRØVE — tolv døgn 2023 per sone, FI som sensus 2021–2024
+
+sone        døgn  tomme  enheter  >1 psrType   psrTyper i sonen
+AT            12      0       35           0   Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro RoR, Hydro Reser
+BE            12      0       46           0   Biomass, Fossil Gas, Hydro Pumped, Nuclear, Wind Offshore
+CZ            12      0       39           0   Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Nuclear
+ES            12      0      173          11   Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro Reservoir, Nucle
       *** MUELA 1G (18WMUE1-12345-FP): ['Hydro Pumped', 'Hydro Reservoir']
       *** MUELA 2G (18WMUE2-12345-FF): ['Hydro Pumped', 'Hydro Reservoir']
       *** MUELA 3G (18WMUE3-12345-F5): ['Hydro Pumped', 'Hydro Reservoir']
@@ -14,11 +16,23 @@ ES            12      173          11   Fossil Gas, Fossil Hard coal, Hydro Pump
       *** SALLENT 2G (18WSLT2-12345-FS): ['Hydro Pumped', 'Hydro Reservoir']
       *** SALLENT 3G (18WSLT3-12345-FI): ['Hydro Pumped', 'Hydro Reservoir']
       *** SALLENT 4G (18WSLT4-12345-F8): ['Hydro Pumped', 'Hydro Reservoir']
-FI          1461       36           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Fossil Peat, Nuclea
-FR            12      151           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Hydro Pumped, Hydro
-IT            12      163           0   Coal-derived gas, Fossil Gas, Fossil Hard coal, Fossil Oil, Geothermal
-NL            12       43           0   Biomass, Fossil Gas, Fossil Hard coal, Nuclear, Other
-PL            12      120           0   Biomass, Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydro Re
-PT            12       73           0   Fossil Gas, Hydro Pumped, Hydro RoR, Hydro Reservoir
+FI          1461      0       36           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Fossil Peat, Nu
+FR            12      0      151           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Hydro Pumped, H
+IT            12      0      163           0   Coal-derived gas, Fossil Gas, Fossil Hard coal, Fossil Oil, Geothe
+NL            12      0       43           0   Biomass, Fossil Gas, Fossil Hard coal, Nuclear, Other
+PL            12      0      120           0   Biomass, Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydr
+PT            12      0       73           0   Fossil Gas, Hydro Pumped, Hydro RoR, Hydro Reservoir
 
-SUM                   879          11
+SUM                          879          11
+
+
+SENSUS — alle døgn. PL/NL/CZ 2023 · GB 1.1.–31.5.2021 · DK kontrollområde 2023
+
+sone        døgn  tomme  enheter  >1 psrType   psrTyper i sonen
+CZ           365      0       39           0   Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Nuclear
+DK-CA        365      0       25           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Solar, Wind Off
+GB           113     38      268           0   Biomass, Fossil Gas, Fossil Hard coal, Fossil Oil, Hydro Pumped, H
+NL           365      0       43           0   Biomass, Fossil Gas, Fossil Hard coal, Nuclear, Other
+PL           365      0      120           0   Biomass, Lignite, Fossil Gas, Fossil Hard coal, Hydro Pumped, Hydr
+
+SUM                          495           0
