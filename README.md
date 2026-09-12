@@ -154,6 +154,20 @@ fast at «no consensus appears to exist which one is the "correct" or most suita
 **Bidraget her er målingen av at skjemaet tillater noe ingen gjør, og kriteriene som skiller
 samtidig dobbeltføring fra omklassifisering over tid.** Ikke observasjonen, og ikke metoden.
 
+## Sitering
+
+| | DOI |
+|---|---|
+| **Denne versjonen** (v1.0.0) | [10.5281/zenodo.22726239](https://doi.org/10.5281/zenodo.22726239) |
+| **Alle versjoner** (konsept) | [10.5281/zenodo.22726238](https://doi.org/10.5281/zenodo.22726238) |
+
+Konsept-DOI-en peker alltid på nyeste versjon; versjons-DOI-en peker på v1.0.0 og endrer seg
+ikke. **Sitér versjons-DOI-en når et tall skal kunne etterprøves.**
+
+**Zenodo-arkivet er zipballen av taggen `v1.0.0`, som ble laget før DOI-en fantes.** Denne
+tabellen står derfor i `main`, ikke i det arkiverte øyeblikksbildet. Kriteriefila
+`PREREG-v1.md` er uendret i begge, `sha256 e722a60e3edf2dd843d6c3149f4d8a02f734b0905b5ed4f45e13b208e52e95db`.
+
 ## Lisens
 
 Kode: **Apache-2.0** (`LICENSE`). Data og dokumentasjon: **CC BY 4.0** (`LICENSE-DATA`).
