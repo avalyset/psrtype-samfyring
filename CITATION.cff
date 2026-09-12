@@ -26,4 +26,4 @@ keywords:
   - co-firing
   - biomass
   - production type
-# repository-code: intentionally omitted until a remote exists and answers.
+repository-code: "https://github.com/avalyset/psrtype-samfyring"
