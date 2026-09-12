@@ -163,6 +163,51 @@ lik virkningsgrad — men de peker på samme tall.
 enhetsdatasett fører som biomasse. Det er ikke samfyring inne i én enhet; det er to
 dataprodukter fra samme leverandør som ikke er enige om hva enheten brenner.
 
+### Amer 9 står alene
+
+Observasjonen er generalisert til en test, og testen er kjørt på alt som finnes på disk.
+
+Per sone, år og `psrType`: summer A73 over alle enheter og timer, sammenlign med A75s kolonne.
+A73 dekker bare enheter på 100 MW eller mer, så **A73 ≤ A75 er normalen og ikke et funn**.
+Funnet er kolonner der A73 *overstiger* A75 — da må minst én enhet ligge et annet sted i A75.
+
+Tre kriterier, alle fastsatt før dommen:
+
+1. **kildekolonne** — A73-summen overstiger A75-kolonnen.
+2. **vedvarenhet** — A73 > 1,02 × A75 i mer enn **57,0 %** av timene. Terskelen er ikke valgt,
+   den er **målt**: maksimum blant de **121** parene der A73 ≤ A75 og det ikke er noe å finne.
+   Fordelingen der har median **0,0 %** og 90-persentil 6,1 %.
+3. **entydig tilskrivning** — nøyaktig **én** (enhet, målkolonne) lukker 90–110 % av et
+   *eksisterende* gap i målkolonnen og lander innenfor 2 %.
+
+Begge tilleggene til kriterium 3 felte falske treff. Uten kravet om entydighet «forklarer» sju
+Bełchatów-enheter det samme gapet på 2 100 GWh i PLs gasskolonne, fordi de alle er rundt
+2 000 GWh. Uten kravet om at gapet skal finnes fra før, «avstemmer» en enhet på 68 GWh inn i en
+brunkullkolonne på 31 473 GWh med 0,775 % avvik.
+
+**130 (sone, psrType)-par i tolv sone-år:** FI 2021–2024, PL, NL, CZ, ES, AT, BE, IT og PT 2023,
+DK kontrollområde 2023 og 2019+2021, GB 1.1.–31.5.2021.
+
+**Ni par har A73 > A75. Ett består alle tre.**
+
+| Sone | psrType | A73 | A75 | ratio | vedvarenhet | dom |
+|---|---|---:|---:|---:|---:|---|
+| **NL 2023** | **B01 Biomass** | **2 650,6** | **190,6** | **13,904** | **70,3 %** | **treff** |
+| ES 2023 | B14 Nuclear | 50 788,4 | 19 980,3 | 2,542 | 88,9 % | A75-defekt |
+| ES 2023 | B05 Fossil Hard coal | 3 733,6 | 2 174,2 | 1,717 | 80,3 % | A75-defekt |
+| PL 2023 | B12 Hydro Reservoir | 176,7 | 133,3 | 1,325 | 38,3 % | støy |
+| DK-CA 2023 | B04 Fossil Gas | 2 527,8 | 1 934,7 | 1,307 | 70,4 % | uavklart |
+| GB 2021 | B10 Hydro Pumped | 871,0 | 764,4 | 1,139 | 64,8 % | annen akse |
+| NL 2023 | B14 Nuclear | 3 579,4 | 3 500,7 | 1,022 | 22,4 % | støy |
+| PL 2023 | B02 Lignite | 31 649,1 | 31 473,1 | 1,006 | 41,9 % | støy |
+| FI 2021-2024 | B14 Nuclear | 105 532,2 | 105 389,7 | 1,001 | 10,5 % | støy |
+
+**Amer 9 er enkeltstående.** Ingen annen enhet i de tolv sone-årene viser en tilskrivbar uenighet
+mellom A73 og A75.
+
+Testen er også kontrollert for tidsforskyvning: for PL `B02` er middelavviket **2,70 %** ved
+lag 0 mot 6,95 % ved −1 t og 6,97 % ved +1 t. Rasteret er justert riktig.
+
 ---
 
 ## Regelverkskjeden
@@ -373,6 +418,21 @@ inneholder — og den felte Tsjekkia, se under.
 **Stikkprøven har ingen styrke mot korte hendelser.** 96,8 % bomrate mot et éndøgnsfenomen.
 PL, NL, FI og ES er derfor kjørt som sensus.
 
+**A75 er ikke alltid publisert komplett.** Spansk A75 for kjernekraft gir 15. juni 2023
+timeverdier som hopper mellom 1 254 og 5 125 MW og mangler sju av døgnets 24 timer, mens A73
+ligger stabilt på ~5 000 MW. Tilsvarende for spansk steinkull. **Det er en publiseringsfeil i
+A75, ikke en tilordning**, og spanske A75-kolonner kan ikke brukes som fasit for A73.
+
+**Én uenighet står uavklart.** DK-kontrollområdets gasskolonne har et vedvarende overskudd på
+**593,1 GWh** (A73 2 527,8 mot A75 1 934,7, 70,4 % av timene). A75 for kontrollområdet er ikke
+defekt — den er lik DK1 + DK2 på alle typer — men overskuddet lar seg ikke tilskrive én enhet.
+Ført som uavklart, ikke som treff.
+
+**En fjerde feiltype ligger utenfor dette arbeidet.** GBs `B10 Hydro Pumped` ble flagget av de
+to første kriteriene, men A73 og A75 er *enige*; uenigheten er mot det britiske registeret.
+Det er etikettaksen, ikke samfyringsaksen, og er ført i `kapregister` v1.1.0 som første
+tilfelle på aksen *vedvarende feilklassifisering uten typeendring*.
+
 ---
 
 ## Hva som falt underveis
@@ -437,9 +497,86 @@ fast at «no consensus appears to exist which one is the "correct" or most suita
 **Ember har publisert observasjonen for Finland** i sin metodedokumentasjon: ENTSO-E-dataene
 underteller bioenergi, og de bytter derfor kilde til Eurostat. Sitert ordrett under «Nedstrøms».
 
-**Etikettaksen — om en enhets registrerte type endres når anlegget konverteres — er målt i
-`kapregister` v1.0.0**,
-[10.5281/zenodo.22722722](https://doi.org/10.5281/zenodo.22722722).
+### Et beslektet spor, prøvd og lukket: implisert utslippsintensitet
+
+**Unnewehr, Weidlich, Gfüllner & Schäfer (2022) bygde koblingen ENTSO-E ↔ EUTL og regnet
+implisert utslippsintensitet per anlegg.** Deres ligning (1):
+
+> «The annual average emission factor `EF(α)` for a power plant α is calculated as the ratio of
+> the total generation per year … to the corresponding emissions per power plant»
+
+De filtrerer resultatet mot et **brenselstypespesifikt plausibilitetsbånd** — gass 300–1 000,
+kull og brunkull 675–1 700 gCO₂/kWh, fra en NREL-gjennomgang — og skriver:
+
+> «If the calculated power plant EF is outside this plausibility range, we assume potential
+> issues with the underlying data (**errors, gaps, misreporting**) and omit the corresponding
+> power plant from further calculations.»
+
+Det ser ut som en detektor for feil brenselsetikett, og de peker selv på neste steg:
+«for a further analysis, plant-specific EFs based on technical properties and fuel types would
+have to be evaluated.» **Vi undersøkte de forkastede.**
+
+**Reproduksjonen er eksakt.** Ligning (1) kjørt på deres egne publiserte mellomfiler gir for
+`Verbund FHKW Mellach` **884,0696448879658** gCO₂/kWh. Deres egen `EF_bottom_up_method.csv`
+fører `AT, hard_coal, 0.8840696448879658`. AT/hard_coal har nøyaktig én validert enhet, så
+teknologifaktoren *er* anleggets faktor — kontrollen er entydig.
+
+**Utfallet: av tolv kandidater under båndet som ikke er kraftvarme, er null et brenselsavvik.
+Alle er koblingsfeil.**
+
+- **ENGIE Eemscentrale (NL), 1 580 MW.** Koblet til A73-enhetene `Eemshaven A` og `B`. Men
+  Nederlands 14.1.B har to Eemshaven-produksjonsenheter — `49W000000000044-` **Fossil Gas**
+  1 410 MW og `49W000000000066Q` **Fossil Hard coal** 1 580 MW — og EUTL-kontoen er ENGIEs
+  **gassanlegg**. Kullenhetenes produksjon ligger på gassanleggets utslippskonto: 1,77 Mt mot
+  10,7 TWh, **en faktor fem for lavt.**
+- **ČEZ, a. s., EPC PPC (CZ), 681 MW.** Koblet til `EPR2_G23/G24/G25`, som Tsjekkias 14.1.B
+  fører som 1 059 MW **brunkull** — Prunéřov II. Men `EPC PPC` er Elektrárna Počerady,
+  *paroplynový cyklus*, og ČEZ skriver selv i årsrapporten for 2023: «Pro **paroplynovou
+  elektrárnu Počerady 2** je **zemní plyn** nakupován na velkoobchodním trhu.» Implisert faktor
+  249,3 er en gassfaktor, ikke en brunkullfaktor.
+- **Sju av de tolv har implisert faktor under 50 gCO₂/kWh.** Et kullverk som brenner biomasse
+  ville også vist lav faktor, men **null** betyr at kontoen ikke har utslipp som svarer til
+  produksjonen.
+
+**Lærdommen: en test som leter etter feiletiketter gjennom en kobling som selv feiler, finner
+koblingsfeilene først.** Koblingen ENTSO-E ↔ EUTL er en feilkilde av samme størrelsesorden som
+det man leter etter.
+
+**Plausibilitetsfilteret gjør nøyaktig det det skal.** Det Unnewehr m.fl. forkastet var dårlige
+koblinger, ikke skjult signal — filteret er riktig for deres formål, som er å bygge et robust
+utvalg for intensitetssignaler. Det er en annen oppgave enn å lete etter feilmerket brensel.
+
+**Tallene, og at de er våre.** Datapakken oppgir **852 opprinnelige · 797 matchede · 554
+validerte** genereringsenheter; differansen er **243**. Artikkelens tabell 5 oppgir 890 · 812 ·
+595, altså **217**. Pakken er datert august 2021 og artikkelen januar 2022 — ulike kjøringer.
+Listen over de forkastede er ikke publisert, og er utledet her. **Alt gjelder 2018.**
+
+### Hvorfor intensitetsveien ikke er en akse i dette arbeidet
+
+Den er ikke lukket fordi den ikke virker. Den er lukket fordi den **ikke når fram hit**.
+
+CHP-korreksjonen er løst per anlegg med en proxy — `CO2_el = CO2_total − 2 × gratis kvoter`,
+begrunnet med at kraftproduksjon ikke får gratistildeling i EU ETS. Proxyen er **kalibrert til
+tildelingsreglene i 2018** og kan ikke overføres uten ny kalibrering.
+
+Men den gir **ett årstall per anlegg**. For et kraftvarmeanlegg med varierende varmelast
+karakteriserer det tallet ingen faktisk driftstilstand, og å måle det mot et bånd utledet for
+stasjonær drift er da ikke en gyldig test. Finlands egen avgrensning er presedensen:
+`erillistuotanto` omfatter kondensdelen av kraftvarmeanlegg, skilt ut **driftsvis** ved lav
+varmelast — skillet går innenfor året, ikke mellom anlegg.
+
+**Alle anleggene i denne studien er kraftvarme.** Alholmens, Poříčí, Hodonín, Amagerværket,
+Avedøreværket, Studstrupværket. Metoden treffer rene kondensanlegg — og europeisk samfyring
+foregår i hovedsak ikke der.
+
+**Ført som metodegrense, ikke som nederlag:** implisert intensitet per anlegg er en brukbar vei
+til feilmerket brensel *for ren kondens*, forutsatt at koblingen holder. For kraftvarme er
+størrelsen ikke veldefinert som årstall.
+
+**Etikettaksen er målt i `kapregister` v1.1.0**,
+[10.5281/zenodo.22728747](https://doi.org/10.5281/zenodo.22728747), på to akser: om en enhets
+registrerte type endres når anlegget konverteres, og — lagt til i v1.1 — **vedvarende
+feilklassifisering uten typeendring**, der Lynemouth er første tilfelle.
 
 **Bidraget her er målingen av at skjemaet tillater noe ingen gjør, kartleggingen av de tre
 enkeltverdi-omgåelsene som brukes i stedet, og kriteriene som skiller samtidig dobbeltføring fra
@@ -449,14 +586,15 @@ omklassifisering over tid.** Ikke observasjonen, og ikke metoden.
 
 | | DOI |
 |---|---|
-| **Denne versjonen** (v1.1.0) | [10.5281/zenodo.22726830](https://doi.org/10.5281/zenodo.22726830) |
+| **Denne versjonen** (v1.2.0) | *fylles inn når Zenodo har mintet den* |
+| Forrige versjon (v1.1.0) | [10.5281/zenodo.22726830](https://doi.org/10.5281/zenodo.22726830) |
 | Forrige versjon (v1.0.0) | [10.5281/zenodo.22726239](https://doi.org/10.5281/zenodo.22726239) |
 | **Alle versjoner** (konsept) | [10.5281/zenodo.22726238](https://doi.org/10.5281/zenodo.22726238) |
 
 Konsept-DOI-en peker alltid på nyeste versjon; versjons-DOI-ene endrer seg ikke. **Sitér
 versjons-DOI-en når et tall skal kunne etterprøves.**
 
-**v1.0.0 er ikke trukket.** Den er frysingsøyeblikket, og Zenodo-posten for den røres ikke.
+**Ingen tidligere versjon er trukket.** Den er frysingsøyeblikket, og Zenodo-posten for den røres ikke.
 Rettelsene over står som daterte merknader, ikke som sletting. Kriteriefila `PREREG-v1.md` er
 uendret i begge versjoner, `sha256 e722a60e3edf2dd843d6c3149f4d8a02f734b0905b5ed4f45e13b208e52e95db`.
 
