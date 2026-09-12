@@ -449,7 +449,7 @@ omklassifisering over tid.** Ikke observasjonen, og ikke metoden.
 
 | | DOI |
 |---|---|
-| **Denne versjonen** (v1.1.0) | *fylles inn når Zenodo har mintet den* |
+| **Denne versjonen** (v1.1.0) | [10.5281/zenodo.22726830](https://doi.org/10.5281/zenodo.22726830) |
 | Forrige versjon (v1.0.0) | [10.5281/zenodo.22726239](https://doi.org/10.5281/zenodo.22726239) |
 | **Alle versjoner** (konsept) | [10.5281/zenodo.22726238](https://doi.org/10.5281/zenodo.22726238) |
 
