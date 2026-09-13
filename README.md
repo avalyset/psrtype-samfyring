@@ -180,10 +180,17 @@ Tre kriterier, alle fastsatt før dommen:
 3. **entydig tilskrivning** — nøyaktig **én** (enhet, målkolonne) lukker 90–110 % av et
    *eksisterende* gap i målkolonnen og lander innenfor 2 %.
 
-Begge tilleggene til kriterium 3 felte falske treff. Uten kravet om entydighet «forklarer» sju
-Bełchatów-enheter det samme gapet på 2 100 GWh i PLs gasskolonne, fordi de alle er rundt
-2 000 GWh. Uten kravet om at gapet skal finnes fra før, «avstemmer» en enhet på 68 GWh inn i en
-brunkullkolonne på 31 473 GWh med 0,775 % avvik.
+Begge tilleggene til kriterium 3 felte falske treff.
+
+**Uten kravet om entydighet** «forklarer» **tre av de tolv** Bełchatów-enhetene det samme gapet
+på **1 734,8 GWh** i PLs gasskolonne, fordi de alle ligger rundt samme størrelse — enhetene
+spenner 1 304,8–2 126,7 GWh. Et gap som mange enheter passer like godt i, er ikke tilskrevet noen
+av dem.
+
+**Kravet om at gapet skal finnes fra før** hindrer at en enhet flyttes inn i en kolonne som
+allerede er i overskudd, der flyttingen ikke avstemmer noe. Kriteriet er strukturelt: en
+tilskrivning skal lukke et hull, ikke skape et. Etter A03-rettelsen gir testen **null falske
+tilskrivninger** i PL `B12`, der den tidligere illustrasjonen var hentet fra.
 
 **130 (sone, psrType)-par i tolv sone-år:** FI 2021–2024, PL, NL, CZ, ES, AT, BE, IT og PT 2023,
 DK kontrollområde 2023 og 2019+2021, GB 1.1.–31.5.2021.
@@ -247,6 +254,13 @@ den ene rettes — det er den eneste typen bekreftelse som betyr noe her.
 | støygulvets maksimum | 57,0 % | **54,7 %** | terskelen fulgte med |
 | NL karbonintensitet, basis | 552,40 | **551,38** | |
 | NL-effekten | −34,64 / −6,27 % | **−34,53 / −6,26 %** | står |
+| Bełchatów-illustrasjonen | sju enheter, gap 2 100 GWh | **tre av tolv, gap 1 734,8 GWh** | står |
+| rene par i støygulvet | 121 | **124** | står |
+| Solina-illustrasjonen | 68 GWh inn i 31 473 GWh, 0,775 % | **strøket** | var en artefakt |
+
+**Solina-eksempelet er tatt ut i v1.3.1.** Det illustrerte kravet om at gapet skal finnes fra før,
+og det reproduserer ikke etter A03-rettelsen: testen gir nå **null falske tilskrivninger i PL
+`B12`**. Kriteriet står uendret og er begrunnet strukturelt i stedet.
 
 **Én konklusjon falt, og den var vår egen.** v1.1 og v1.2 skrev at spansk A75 var publisert
 ufullstendig — «timeverdier som hopper mellom 1 254 og 5 125 MW». Hoppene var trappekurven, lest
@@ -634,7 +648,8 @@ omklassifisering over tid.** Ikke observasjonen, og ikke metoden.
 
 | | DOI |
 |---|---|
-| **Denne versjonen** (v1.3.0) | [10.5281/zenodo.22733096](https://doi.org/10.5281/zenodo.22733096) |
+| **Denne versjonen** (v1.3.1) | *fylles inn når Zenodo har mintet den* |
+| Forrige versjon (v1.3.0) | [10.5281/zenodo.22733096](https://doi.org/10.5281/zenodo.22733096) |
 | Forrige versjon (v1.2.0) | [10.5281/zenodo.22729193](https://doi.org/10.5281/zenodo.22729193) |
 | Forrige versjon (v1.1.0) | [10.5281/zenodo.22726830](https://doi.org/10.5281/zenodo.22726830) |
 | Forrige versjon (v1.0.0) | [10.5281/zenodo.22726239](https://doi.org/10.5281/zenodo.22726239) |
