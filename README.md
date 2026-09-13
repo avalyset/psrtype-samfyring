@@ -101,23 +101,23 @@ A73 for hele 2023, sensus over 365 døgn:
 
 | A73-enhet | `psrType` | GWh |
 |---|---|---:|
-| `Połaniec 2 blok 9` | B01 Biomass | **1 505,7** |
-| `Połaniec B1`–`B7` (sum) | B05 Fossil Hard coal | **5 235,6** |
-| sum, hele anlegget | | 6 741,3 |
+| `Połaniec 2 blok 9` | B01 Biomass | **1 506,7** |
+| `Połaniec B1`–`B7` (sum) | B05 Fossil Hard coal | **5 252,6** |
+| sum, hele anlegget | | 6 759,3 |
 
 **Referansemålingen først.** Zielony Blok er dedikert biomasse — A73 og anleggets egen rapport
-måler det samme: **1 505,7 mot 1 507,0 GWh, R = 0,999.** Bokføringen per enhet er presis når
+måler det samme: **1 506,7 mot 1 507,0 GWh, R = 1,000.** Bokføringen per enhet er presis når
 enheten brenner ett brensel. Metoden er dermed ikke kilden til avviket.
 
-A73 ligger systematisk **1,71 %** over Eneas nettotall på anleggsnivå (6 741,3 mot 6 628,0).
+A73 ligger systematisk **1,98 %** over Eneas nettotall på anleggsnivå (6 759,3 mot 6 628,0).
 Normalisert bort:
 
 | A73 `B05` normalisert | mot | GWh | **R** |
 |---:|---|---:|---:|
-| 5 147,6 | **hele produksjonen** i blokk 2–7 (4 870 + 252) | 5 122,0 | **1,005** |
-| 5 147,6 | **kull-tilskrevet** produksjon alene (4 870) | 4 870,0 | 1,057 |
+| 5 150,5 | **hele produksjonen** i blokk 2–7 (4 870 + 252) | 5 122,0 | **1,006** |
+| 5 150,5 | **kull-tilskrevet** produksjon alene (4 870) | 4 870,0 | 1,058 |
 
-**A73s kullkolonne matcher hele blokkenes produksjon til 0,5 %, ikke den kull-tilskrevne delen.**
+**A73s kullkolonne matcher hele blokkenes produksjon til 0,6 %, ikke den kull-tilskrevne delen.**
 Hele enhetens produksjon føres under ett brensel. Samme mekanisme er vist for Alholmens Kraft
 AK 2 i Finland — nå på et annet anlegg, i en annen sone, med en intern referansemåling.
 
@@ -135,26 +135,26 @@ A73 for Nederland 2023, sensus over 365 døgn, alle enheter med kull- eller biom
 
 | A73-enhet | `psrType` | GWh 2023 |
 |---|---|---:|
-| `Maasvlakte 3` | B05 Fossil Hard coal | 3 334,9 |
-| `Eemshaven A` | B05 Fossil Hard coal | 2 500,2 |
-| `Eemshaven B` | B05 Fossil Hard coal | 1 961,2 |
-| `NLROTTETH__1` | B05 Fossil Hard coal | 1 445,4 |
-| **sum `B05`** | | **9 241,7** |
-| `Amer 9` | **B01 Biomass** | **2 650,6** |
+| `Maasvlakte 3` | B05 Fossil Hard coal | 3 365,3 |
+| `Eemshaven A` | B05 Fossil Hard coal | 2 507,4 |
+| `Eemshaven B` | B05 Fossil Hard coal | 1 968,8 |
+| `NLROTTETH__1` | B05 Fossil Hard coal | 1 448,3 |
+| **sum `B05`** | | **9 289,7** |
+| `Amer 9` | **B01 Biomass** | **2 657,7** |
 
 A75 for samme sone og år, summert time for time fra tolv månedsdokumenter:
 
 | | GWh 2023 |
 |---|---:|
-| A75 `Fossil Hard coal` | **11 897,1** |
-| A73 `B05` + `Amer 9` | **11 892,3** |
-| **avvik** | **−4,8 GWh = −0,040 %** |
-| A75 `Biomass` | 190,6 |
+| A75 `Fossil Hard coal` | **11 977,5** |
+| A73 `B05` + `Amer 9` | **11 947,5** |
+| **avvik** | **−30,0 GWh = −0,251 %** |
+| A75 `Biomass` | 194,9 |
 
 **Regnestykket går bare opp hvis Amer 9 ligger i kullkolonnen.** A75s `Biomass`-kolonne er
-190,6 GWh for hele året — Amer 9 alene er 2 650,6. Enheten er ikke der.
+194,9 GWh for hele året — Amer 9 alene er 2 657,7. Enheten er ikke der.
 
-Og andelen stemmer med den uavhengige kilden: 3 775,3 / 11 897,1 = **31,7 %**, mot CBS' **31 %
+Og andelen stemmer med den uavhengige kilden: 3 775,3 / 11 977,5 = **31,5 %**, mot CBS' **31 %
 av den totale energiinnsatsen i kolencentrales**. De to er ikke identiske størrelser —
 CBS måler innsats, dette måler utbytte, og de faller sammen bare hvis brenslene omdannes med
 lik virkningsgrad — men de peker på samme tall.
@@ -174,9 +174,9 @@ Funnet er kolonner der A73 *overstiger* A75 — da må minst én enhet ligge et 
 Tre kriterier, alle fastsatt før dommen:
 
 1. **kildekolonne** — A73-summen overstiger A75-kolonnen.
-2. **vedvarenhet** — A73 > 1,02 × A75 i mer enn **57,0 %** av timene. Terskelen er ikke valgt,
-   den er **målt**: maksimum blant de **121** parene der A73 ≤ A75 og det ikke er noe å finne.
-   Fordelingen der har median **0,0 %** og 90-persentil 6,1 %.
+2. **vedvarenhet** — A73 > 1,02 × A75 i mer enn **54,7 %** av timene. Terskelen er ikke valgt,
+   den er **målt**: maksimum blant de **124** parene der A73 ≤ A75 og det ikke er noe å finne.
+   Fordelingen der har median **0,0 %** og 90-persentil 3,8 %.
 3. **entydig tilskrivning** — nøyaktig **én** (enhet, målkolonne) lukker 90–110 % av et
    *eksisterende* gap i målkolonnen og lander innenfor 2 %.
 
@@ -188,25 +188,73 @@ brunkullkolonne på 31 473 GWh med 0,775 % avvik.
 **130 (sone, psrType)-par i tolv sone-år:** FI 2021–2024, PL, NL, CZ, ES, AT, BE, IT og PT 2023,
 DK kontrollområde 2023 og 2019+2021, GB 1.1.–31.5.2021.
 
-**Ni par har A73 > A75. Ett består alle tre.**
+**Seks par har A73 > A75. Ett består alle tre.**
 
 | Sone | psrType | A73 | A75 | ratio | vedvarenhet | dom |
 |---|---|---:|---:|---:|---:|---|
-| **NL 2023** | **B01 Biomass** | **2 650,6** | **190,6** | **13,904** | **70,3 %** | **treff** |
-| ES 2023 | B14 Nuclear | 50 788,4 | 19 980,3 | 2,542 | 88,9 % | A75-defekt |
-| ES 2023 | B05 Fossil Hard coal | 3 733,6 | 2 174,2 | 1,717 | 80,3 % | A75-defekt |
-| PL 2023 | B12 Hydro Reservoir | 176,7 | 133,3 | 1,325 | 38,3 % | støy |
-| DK-CA 2023 | B04 Fossil Gas | 2 527,8 | 1 934,7 | 1,307 | 70,4 % | uavklart |
-| GB 2021 | B10 Hydro Pumped | 871,0 | 764,4 | 1,139 | 64,8 % | annen akse |
-| NL 2023 | B14 Nuclear | 3 579,4 | 3 500,7 | 1,022 | 22,4 % | støy |
-| PL 2023 | B02 Lignite | 31 649,1 | 31 473,1 | 1,006 | 41,9 % | støy |
-| FI 2021-2024 | B14 Nuclear | 105 532,2 | 105 389,7 | 1,001 | 10,5 % | støy |
+| **NL 2023** | **B01 Biomass** | **2 657,7** | **194,9** | **13,634** | **69,1 %** | **treff** |
+| DK-CA 2023 | B04 Fossil Gas | 2 541,8 | 1 935,4 | 1,313 | 70,9 % | uavklart |
+| PL 2023 | B12 Hydro Reservoir | 180,8 | 152,3 | 1,187 | 23,7 % | støy |
+| GB 2021 | B10 Hydro Pumped | 894,7 | 784,9 | 1,140 | 56,3 % | annen akse |
+| PL 2023 | B02 Lignite | 32 108,1 | 31 473,1 | 1,020 | 51,7 % | støy |
+| FI 2021-2024 | B14 Nuclear | 110 690,7 | 110 446,5 | 1,002 | 3,8 % | støy |
 
 **Amer 9 er enkeltstående.** Ingen annen enhet i de tolv sone-årene viser en tilskrivbar uenighet
-mellom A73 og A75.
+mellom A73 og A75. Enheten lukker **98,9 %** av gapet på 2 687,8 GWh i kullkolonnen.
 
-Testen er også kontrollert for tidsforskyvning: for PL `B02` er middelavviket **2,70 %** ved
-lag 0 mot 6,95 % ved −1 t og 6,97 % ved +1 t. Rasteret er justert riktig.
+Testen er også kontrollert for tidsforskyvning: for PL `B02` er middelavviket **2,02 %** ved
+lag 0 mot 6,43 % ved −1 t og 6,52 % ved +1 t. Rasteret er justert riktig.
+
+---
+
+## Trappekurven — en felle å kjenne
+
+**Alle ENTSO-E-serier er `curveType A03`.** Det betyr at en manglende posisjon i en `Period` ikke
+er manglende data — den betyr **at forrige verdi holder**. Målt i dette materialet:
+
+| | |
+|---|---|
+| `curveType` i FI 2021 | **A03 i 12 412 av 12 412** tidsserier |
+| perioder med hull i posisjonene, GB 2021 | **4 125 av 6 521** |
+| perioder med hull, A75 NL 2023 | 171 av 240 |
+
+**En parser som summerer de punktene som står oppført, underrapporterer energi i hver serie med
+hull.** Feilen er ikke ensartet — den avhenger av hvor glisen serien er:
+
+| Enhet, FI 2021 | summert som oppført | A03-ekspandert | |
+|---|---:|---:|---:|
+| Alholmens B2 | 633,4 | **664,2** | +4,9 % |
+| Seinäjoki B1 | 498,9 | 534,8 | +7,2 % |
+| Keljonlahti B1 | 432,1 | 529,5 | **+22,6 %** |
+
+**Vi gikk i den selv.** Parseren som ble skrevet for konsistenstesten summerte oppførte punkter.
+Tallene i v1.1 og v1.2 var derfor for lave. De er rettet her, og den naive versjonen er beholdt
+som `a73_mot_a75_FEIL-naiv.py` i arbeidskatalogen så rettelsen kan etterprøves mot begge.
+
+**Kontrollen som avgjorde det:** en eldre parser i det finske arbeidet ga 664,18 GWh for
+Alholmens B2 i 2021. A03-ekspansjonen gir **664,2**. To uavhengige implementasjoner møtes når
+den ene rettes — det er den eneste typen bekreftelse som betyr noe her.
+
+### Hva rettelsen gjorde
+
+| | v1.1 / v1.2 | v1.3 | |
+|---|---:|---:|---|
+| Amer 9-avstemming | −0,040 % | **−0,251 %** | står |
+| samme, uten Amer 9 | −22,32 % | **−22,4 %** | står |
+| Połaniec, R på biomasseblokken | 0,999 | **1,000** | står |
+| Połaniec, R mot hele produksjonen | 1,005 | **1,006** | står |
+| par med A73 > A75 | 9 | **6** | to spanske rader falt ut |
+| støygulvets maksimum | 57,0 % | **54,7 %** | terskelen fulgte med |
+| NL karbonintensitet, basis | 552,40 | **551,38** | |
+| NL-effekten | −34,64 / −6,27 % | **−34,53 / −6,26 %** | står |
+
+**Én konklusjon falt, og den var vår egen.** v1.1 og v1.2 skrev at spansk A75 var publisert
+ufullstendig — «timeverdier som hopper mellom 1 254 og 5 125 MW». Hoppene var trappekurven, lest
+feil. Korrekt ekspandert gir spansk kjernekraft **A73 54 356,4 mot A75 54 372,6 GWh, ratio
+1,000**, og de to følger hverandre time for time innenfor 0,1 %. **Påstanden er trukket.**
+
+**Ingen annen konklusjon endres.** Amer 9 står alene, tellingen er uendret, og treffene er de
+samme — testen ble renere, ikke svakere.
 
 ---
 
@@ -353,9 +401,9 @@ vind/vann 26, biomasse og avfall 0 gCO2eq/kWh).
 
 | Sone | A75 total | som den står | korrigert | differanse | | flyttet |
 |---|---:|---:|---:|---:|---|---:|
-| **NL** | 108 426,8 GWh | **552,40** | 517,76 | **−34,64 g/kWh** | **−6,27 %** | 3 775 GWh |
-| NL, nedre | | | 520,77 | −31,63 g/kWh | −5,73 % | 3 447 GWh |
-| **PL** | 153 207,4 GWh | **713,86** | 712,22 | **−1,64 g/kWh** | **−0,23 %** | 252 GWh |
+| **NL** | 108 789,1 GWh | **551,38** | 516,85 | **−34,53 g/kWh** | **−6,26 %** | 3 775 GWh |
+| NL, nedre | | | 519,85 | −31,53 g/kWh | −5,72 % | 3 447 GWh |
+| **PL** | 153 259,9 GWh | **713,71** | 712,08 | **−1,64 g/kWh** | **−0,23 %** | 252 GWh |
 
 Differansen i g/kWh er uavhengig av resten av miksen: Δ = −(995 − 0) · X / total. Bare prosenten
 avhenger av basis.
@@ -376,7 +424,7 @@ Den laveste er oppgitt som nedre grense.
 er 0,16 % av polsk produksjon.
 
 **Grense ved NL-beregningen:** NLs A75 bærer ikke en brukbar brenselsmiks uansett samfyring.
-`B20 Other` er **35,3 %** av kolonnen, og `B16 Solar` er 546,6 GWh mot OWIDs 21 150 GWh for samme
+`B20 Other` er **35,2 %** av kolonnen, og `B16 Solar` er 547,2 GWh mot OWIDs 21 150 GWh for samme
 år. De absolutte CI-verdiene for NL er derfor ikke meningsfulle. Differansen er det.
 
 ---
@@ -418,13 +466,13 @@ inneholder — og den felte Tsjekkia, se under.
 **Stikkprøven har ingen styrke mot korte hendelser.** 96,8 % bomrate mot et éndøgnsfenomen.
 PL, NL, FI og ES er derfor kjørt som sensus.
 
-**A75 er ikke alltid publisert komplett.** Spansk A75 for kjernekraft gir 15. juni 2023
-timeverdier som hopper mellom 1 254 og 5 125 MW og mangler sju av døgnets 24 timer, mens A73
-ligger stabilt på ~5 000 MW. Tilsvarende for spansk steinkull. **Det er en publiseringsfeil i
-A75, ikke en tilordning**, og spanske A75-kolonner kan ikke brukes som fasit for A73.
+**Påstanden om at spansk A75 er publisert ufullstendig er trukket.** Den sto i v1.1 og v1.2
+og var vår egen parsefeil — se «Trappekurven» under. Korrekt lest gir spansk kjernekraft
+**A73 54 356,4 mot A75 54 372,6 GWh, ratio 1,000**, og timeverdiene følger hverandre innenfor
+0,1 % gjennom døgnet. **A75 for Spania er i orden.**
 
 **Én uenighet står uavklart.** DK-kontrollområdets gasskolonne har et vedvarende overskudd på
-**593,1 GWh** (A73 2 527,8 mot A75 1 934,7, 70,4 % av timene). A75 for kontrollområdet er ikke
+**606,4 GWh** (A73 2 541,8 mot A75 1 935,4, 70,9 % av timene). A75 for kontrollområdet er ikke
 defekt — den er lik DK1 + DK2 på alle typer — men overskuddet lar seg ikke tilskrive én enhet.
 Ført som uavklart, ikke som treff.
 
@@ -586,7 +634,8 @@ omklassifisering over tid.** Ikke observasjonen, og ikke metoden.
 
 | | DOI |
 |---|---|
-| **Denne versjonen** (v1.2.0) | [10.5281/zenodo.22729193](https://doi.org/10.5281/zenodo.22729193) |
+| **Denne versjonen** (v1.3.0) | *fylles inn når Zenodo har mintet den* |
+| Forrige versjon (v1.2.0) | [10.5281/zenodo.22729193](https://doi.org/10.5281/zenodo.22729193) |
 | Forrige versjon (v1.1.0) | [10.5281/zenodo.22726830](https://doi.org/10.5281/zenodo.22726830) |
 | Forrige versjon (v1.0.0) | [10.5281/zenodo.22726239](https://doi.org/10.5281/zenodo.22726239) |
 | **Alle versjoner** (konsept) | [10.5281/zenodo.22726238](https://doi.org/10.5281/zenodo.22726238) |
