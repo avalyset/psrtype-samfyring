@@ -634,7 +634,7 @@ omklassifisering over tid.** Ikke observasjonen, og ikke metoden.
 
 | | DOI |
 |---|---|
-| **Denne versjonen** (v1.3.0) | *fylles inn når Zenodo har mintet den* |
+| **Denne versjonen** (v1.3.0) | [10.5281/zenodo.22733096](https://doi.org/10.5281/zenodo.22733096) |
 | Forrige versjon (v1.2.0) | [10.5281/zenodo.22729193](https://doi.org/10.5281/zenodo.22729193) |
 | Forrige versjon (v1.1.0) | [10.5281/zenodo.22726830](https://doi.org/10.5281/zenodo.22726830) |
 | Forrige versjon (v1.0.0) | [10.5281/zenodo.22726239](https://doi.org/10.5281/zenodo.22726239) |
