@@ -5,6 +5,7 @@ TSO gjør det. Tre TSO-er møter det samme problemet — anlegg som brenner fler
 løser det på tre forskjellige måter, alle med én verdi.**
 
 ```bash
+pip install -r requirements.txt
 python3 -m src.tell
 python3 -m pytest tests/ -q
 ```
@@ -222,7 +223,7 @@ er manglende data — den betyr **at forrige verdi holder**. Målt i dette mater
 | | |
 |---|---|
 | `curveType` i FI 2021 | **A03 i 12 412 av 12 412** tidsserier |
-| perioder med hull i posisjonene, GB 2021 | **4 125 av 6 521** |
+| perioder med hull i posisjonene, GB 2021 | **14 278 av 23 403** |
 | perioder med hull, A75 NL 2023 | 171 av 240 |
 
 **En parser som summerer de punktene som står oppført, underrapporterer energi i hver serie med
@@ -416,7 +417,7 @@ vind/vann 26, biomasse og avfall 0 gCO2eq/kWh).
 | Sone | A75 total | som den står | korrigert | differanse | | flyttet |
 |---|---:|---:|---:|---:|---|---:|
 | **NL** | 108 789,1 GWh | **551,38** | 516,85 | **−34,53 g/kWh** | **−6,26 %** | 3 775 GWh |
-| NL, nedre | | | 519,85 | −31,53 g/kWh | −5,72 % | 3 447 GWh |
+| NL, nedre | | | 519,12 | −32,26 g/kWh | −5,85 % | 3 527 GWh |
 | **PL** | 153 259,9 GWh | **713,71** | 712,08 | **−1,64 g/kWh** | **−0,23 %** | 252 GWh |
 
 Differansen i g/kWh er uavhengig av resten av miksen: Δ = −(995 − 0) · X / total. Bare prosenten
@@ -427,11 +428,11 @@ avhenger av basis.
 | | GWh |
 |---|---:|
 | CBS tabell 8.3.2, elektrisitet fra medfyrt biomasse (13 591 TJ) | **3 775,3** |
-| 31 % av A75s kullkolonne (CBS' andel av energiinnsatsen) | 3 688,1 |
-| A75 `Fossil Hard coal` minus Ember/OWIDs kulltall (11 897,1 − 8 450) | 3 447,1 |
+| 31 % av A75s kullkolonne (CBS' andel av energiinnsatsen) | 3 713,0 |
+| A75 `Fossil Hard coal` minus Ember/OWIDs kulltall for NL 2023, slik codecarbon v3.2.8 fører det (`coal_TWh` 8,45): 11 977,5 − 8 450 | 3 527,5 |
 
-Spredningen er 9 %. **CBS-tallet brukes som sentralestimat** fordi det er den eneste av de tre
-som er en direkte måling, og fordi det treffer kullkolonnen på 31,7 % — se avsnittet om Amer 9.
+Spredningen er 7 %. **CBS-tallet brukes som sentralestimat** fordi det er den eneste av de tre
+som er en direkte måling, og fordi det treffer kullkolonnen på 31,5 % — se avsnittet om Amer 9.
 Den laveste er oppgitt som nedre grense.
 
 **PL-tallet er lite fordi anlegget er lite**, ikke fordi mekanismen er svak. Połaniecs samfyring
@@ -499,8 +500,14 @@ tilfelle på aksen *vedvarende feilklassifisering uten typeendring*.
 
 ## Hva som falt underveis
 
-Fem påstander fra forarbeidet og fra v1.0.0 er trukket. De står her fordi de ellers ville blitt
-gjentatt.
+Fem påstander fra forarbeidet og fra v1.0.0 er trukket, og v1.3.2 retter tall som var regnet på
+feil grunnlag. De står her fordi de ellers ville blitt gjentatt.
+
+### Rettet 2026-11-06, i v1.3.2
+
+**v1.3.0 og v1.3.1 regnet disse tallene på NLs A75-kullkolonne fra før A03-rettelsen (11 897,1 GWh): rute 2 og 3 i tabellen over de tre NL-veiene, spredningen og CBS-tallets andel i avsnittet under, og den nedre grensen i effekttabellen. Kolonnen selv og andelen i avsnittet om Amer 9 var allerede rettet. På den rettede kolonnen (11 977,5 GWh) blir rute 2 og 3 3 713,0 og 3 527,5, spredningen 7 %, andelen 31,5 % og den nedre grensen 519,12 (−32,26 g/kWh, −5,85 %, 3 527 GWh).**
+
+**Tellingen av perioder med hull i GB 2021 var gjort på 30 innholdsfiler fra januar og februar (4 125 av 6 521). Over full dekning (113 filer) er den 14 278 av 23 403.**
 
 ### Rettet 2026-09-12, etter v1.0.0
 
@@ -648,7 +655,8 @@ omklassifisering over tid.** Ikke observasjonen, og ikke metoden.
 
 | | DOI |
 |---|---|
-| **Denne versjonen** (v1.3.1) | [10.5281/zenodo.22733391](https://doi.org/10.5281/zenodo.22733391) |
+| **Denne versjonen** (v1.3.2) | [10.5281/zenodo.22726238](https://doi.org/10.5281/zenodo.22726238) (konsept-DOI; versjons-DOI-en tildeles ved publisering) |
+| Forrige versjon (v1.3.1) | [10.5281/zenodo.22733391](https://doi.org/10.5281/zenodo.22733391) |
 | Forrige versjon (v1.3.0) | [10.5281/zenodo.22733096](https://doi.org/10.5281/zenodo.22733096) |
 | Forrige versjon (v1.2.0) | [10.5281/zenodo.22729193](https://doi.org/10.5281/zenodo.22729193) |
 | Forrige versjon (v1.1.0) | [10.5281/zenodo.22726830](https://doi.org/10.5281/zenodo.22726830) |

@@ -1,0 +1,36 @@
+{
+  "upload_type": "software",
+  "title": "psrtype-samfyring — ENTSO-E's schema permits two production types per generation unit; no TSO uses it, and three solve multi-fuel plants three different ways",
+  "description": "ENTSO-E's GL_MarketDocument schema places TimeSeries at 1..unbounded per document, each carrying exactly one psrType, with no uniqueness constraint on the generating unit mRID. Two TimeSeries for the same unit with different production types are therefore schema-valid. Across 2 191 documents covering 199 generation units in three bidding zones where biomass co-firing is documented in a dated primary source for 2021-2024 -- Finland, Poland and the Netherlands -- no unit carries two production types in the same document. Unit resolution itself works: Drax appears in GB data with six units under three production types simultaneously, so the gap is fuel mixing within a single unit. Three TSOs instead use three different single-valued workarounds: PSE splits the plant into two production units, TenneT relabels over time, and CEPS records a multi-fuel plant as \"Other\". Neither Regulation (EU) 543/2013 nor ENTSO-E's Manual of Procedures, to which Article 5(d) delegates the classification of production types, contains any of twelve multi-fuel terms. Criteria were preregistered and checksummed before the finding was frozen. v1.1.0 corrects three claims in v1.0.0 about zone coverage and adds the measured downstream effect. v1.3.0 corrects the curveType A03 step-curve parse, and v1.3.2 recomputes the figures that depend on the corrected Dutch A75 coal column and recounts the GB 2021 position gaps over full coverage.",
+  "creators": [
+    {
+      "name": "Botten Nicolaysen, Eirik",
+      "affiliation": "EcoDeco AS",
+      "orcid": "0009-0001-9188-6788"
+    }
+  ],
+  "license": "apache-2.0",
+  "keywords": [
+    "ENTSO-E",
+    "transparency platform",
+    "data quality",
+    "co-firing",
+    "biomass",
+    "production type"
+  ],
+  "version": "v1.3.2",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24014891",
+      "relation": "isReferencedBy",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "arXiv:2609.16152",
+      "relation": "isReferencedBy",
+      "resource_type": "publication-preprint",
+      "scheme": "arxiv"
+    }
+  ]
+}
